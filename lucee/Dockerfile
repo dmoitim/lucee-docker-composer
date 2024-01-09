@@ -2,8 +2,8 @@ FROM alpine as base
 
 RUN apk add openjdk11-jre
 
-ARG LUCEE_VERSION="5.4.4.38"
-ARG LUCEE_PASSWORD="Lucee2023!"
+ARG LUCEE_VERSION="6.0.0.585"
+ARG LUCEE_PASSWORD="@Lucee2024!"
 ARG ORACLE_DRIVER_VERSION="21.8.0.0-ojdbc11"
 ARG ADMIN_VERSION="1.0.0.5"
 ARG PDF_VERSION="1.2.0.10"
@@ -28,6 +28,9 @@ RUN mkdir /lucee && \
 # Set password
 RUN echo ${LUCEE_PASSWORD} > /lucee/lucee-server/context/password.txt
 
+# Copy the config file with pt-BR locale and timezone
+COPY /config/.CFConfig.json /lucee/lucee-server/context/.CFConfig.json
+
 # Add the extensions
 ADD https://ext.lucee.org/lucee.admin.extension-${ADMIN_VERSION}.lex /lucee/lucee-server/deploy/lucee.admin.extension-${ADMIN_VERSION}.lex
 ADD https://ext.lucee.org/org.lucee.oracle-${ORACLE_DRIVER_VERSION}.lex /lucee/lucee-server/deploy/org.lucee.oracle-${ORACLE_DRIVER_VERSION}.lex
@@ -39,7 +42,11 @@ ADD https://ext.lucee.org/ajax.extension-${AJAX_VERSION}.lex /lucee/lucee-server
 
 RUN LUCEE_ENABLE_WARMUP=true /lucee/startup.sh
 
+
+
 FROM alpine
-RUN apk add openjdk11-jre
+RUN apk add tzdata openjdk11-jre
+ENV TZ=America/Sao_Paulo
+
 COPY --from=base /lucee /lucee
 ENTRYPOINT [ "/lucee/startup.sh" ]
