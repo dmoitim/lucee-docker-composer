@@ -271,24 +271,9 @@
       "arguments": "case-sensitive:true;lock-timeout:1000;"
     }
   ],
-  "salt": "0ED2F79E-DA7B-4C95-BBA7673D71A59C35",
-  "hspw": "ece53dbe1cd453422815de3b7ee289a192237494264a873aecf452fbf69bdab7",
+  "salt": "9AECB436-3FD7-470F-9FFE6E851078255A",
+  "hspw": "170c209502ba738435318bf5fa1744d391e6420c1542aed8c163fa412632d544",
   "extensions": [
-    {
-      "id": "FAD67145-E3AE-30F8-1C11A6CCF544F0B7",
-      "name": "Form Tags",
-      "version": "1.0.0.10"
-    },
-    {
-      "id": "D4EDFDBD-A9A3-E9AF-597322D767E0C949",
-      "name": "Oracle 12c (Release 1)",
-      "version": "21.8.0.0-ojdbc11"
-    },
-    {
-      "id": "B737ABC4-D43F-4D91-8E8E973E37C40D1B",
-      "name": "Image extension",
-      "version": "2.0.0.25"
-    },
     {
       "id": "CED6227E-0F49-6367-A68D21AACA6B07E8",
       "name": "Lucee Administrator",
@@ -300,14 +285,29 @@
       "version": "1.2.0.10"
     },
     {
-      "id": "6E2CB28F-98FB-4B51-B6BE6C64ADF35473",
-      "name": "Ajax Extension",
-      "version": "1.0.0.5"
+      "id": "B737ABC4-D43F-4D91-8E8E973E37C40D1B",
+      "name": "Image extension",
+      "version": "2.0.0.26"
     },
     {
       "id": "8D7FB0DF-08BB-1589-FE3975678F07DB17",
       "name": "Compress Tags",
       "version": "1.0.0.15"
+    },
+    {
+      "id": "6E2CB28F-98FB-4B51-B6BE6C64ADF35473",
+      "name": "Ajax Extension",
+      "version": "1.0.0.5"
+    },
+    {
+      "id": "FAD67145-E3AE-30F8-1C11A6CCF544F0B7",
+      "name": "Form Tags",
+      "version": "1.0.0.10"
+    },
+    {
+      "id": "D4EDFDBD-A9A3-E9AF-597322D767E0C949",
+      "name": "Oracle 12c (Release 1)",
+      "version": "21.8.0.0-ojdbc11"
     }
   ],
   "jdbcDrivers": {

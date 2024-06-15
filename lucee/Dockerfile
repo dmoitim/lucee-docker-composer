@@ -2,12 +2,12 @@ FROM alpine as base
 
 RUN apk add openjdk11-jre
 
-ARG LUCEE_VERSION="6.0.0.585"
+ARG LUCEE_VERSION="6.0.3.1"
 ARG LUCEE_PASSWORD="@Lucee2024!"
 ARG ORACLE_DRIVER_VERSION="21.8.0.0-ojdbc11"
 ARG ADMIN_VERSION="1.0.0.5"
 ARG PDF_VERSION="1.2.0.10"
-ARG IMAGE_VERSION="2.0.0.25"
+ARG IMAGE_VERSION="2.0.0.26"
 ARG FORM_VERSION="1.0.0.10"
 ARG COMPRESS_VERSION="1.0.0.15"
 ARG AJAX_VERSION="1.0.0.5"
@@ -41,8 +41,6 @@ ADD https://ext.lucee.org/compress-extension-${COMPRESS_VERSION}.lex /lucee/luce
 ADD https://ext.lucee.org/ajax.extension-${AJAX_VERSION}.lex /lucee/lucee-server/deploy/ajax.extension-${AJAX_VERSION}.lex
 
 RUN LUCEE_ENABLE_WARMUP=true /lucee/startup.sh
-
-
 
 FROM alpine
 RUN apk add tzdata openjdk11-jre

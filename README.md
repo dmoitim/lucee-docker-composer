@@ -2,7 +2,7 @@
 Sobe um container docker com o Lucee e as extensões de Administração e Driver Oracle
 
 Para "subir" o container, execute o comando:  
-`docker-compose up -d`
+`docker compose up -d`
 
 Feito isso, basta acessar o endereço http://localhost:8888 pelo navegador.
 
