@@ -1,13 +1,15 @@
-# lucee-docker-compose
-Sobe um container docker com o Lucee e as extensões de Administração e Driver Oracle
+# Lucee Docker Compose
+Este projeto permite que você execute um contêiner Docker com o Lucee e as extensões de Administração e Driver Oracle.
 
-Para "subir" o container, execute o comando:  
+## Como usar
+1. Execute o seguinte comando para iniciar o contêiner:  
 `docker compose up -d`
 
-Feito isso, basta acessar o endereço http://localhost:8888 pelo navegador.
+2. Acesse o endereço http://localhost:8888 no seu navegador.
 
-O administrador está acessível pelo endereço, http://localhost:8888/lucee/admin/server.cfm.
+3. O painel de administração está disponível em http://localhost:8888/lucee/admin/server.cfm.
 
-OBS: Após o container estar sendo executado, foi criado um volume, e todos os fontes da pasta webroot estarão acessíveis via navegador.
+4. Após o contêiner estar em execução, todos os arquivos da pasta webroot estarão acessíveis via navegador.
 
-Referência: https://markdrew.io/
+## Referência
+Este projeto foi inspirado por https://markdrew.io/

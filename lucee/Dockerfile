@@ -1,4 +1,4 @@
-FROM alpine as base
+FROM alpine:3.20.1 AS base
 
 RUN apk add openjdk11-jre
 
@@ -42,8 +42,12 @@ ADD https://ext.lucee.org/ajax.extension-${AJAX_VERSION}.lex /lucee/lucee-server
 
 RUN LUCEE_ENABLE_WARMUP=true /lucee/startup.sh
 
-FROM alpine
+FROM alpine:3.20.1
 RUN apk add tzdata openjdk11-jre
+
+# Remove cache files
+RUN rm -rf /var/cache/apk/*
+
 ENV TZ=America/Sao_Paulo
 
 COPY --from=base /lucee /lucee
