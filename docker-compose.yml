@@ -3,13 +3,15 @@ services:
   lucee:
     container_name: lucee-docker
     build:
-      context: ./lucee
+      context: .
     ports:
       - '8888:8888'
     volumes:
-      - ./webroot:/lucee/webapps/ROOT
+      - ./webroot:/var/www
     networks:
       - lucee-network
+    environment:
+      - LUCEE_ADMIN_PASSWORD=@Lucee2025!
 
 networks:
   lucee-network:

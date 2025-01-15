@@ -7,9 +7,11 @@ Este projeto permite que você execute um contêiner Docker com o Lucee e as ext
 
 2. Acesse o endereço http://localhost:8888 no seu navegador.
 
-3. O painel de administração está disponível em http://localhost:8888/lucee/admin/server.cfm.
+3. O painel de administração está disponível em http://localhost:8888/lucee/admin/index.cfm.
 
 4. Após o contêiner estar em execução, todos os arquivos da pasta webroot estarão acessíveis via navegador.
 
 ## Referência
-Este projeto foi inspirado por https://markdrew.io/
+Este projeto foi inspirado por:
+- https://markdrew.io/
+- https://github.com/lucee/lucee-docs/tree/master/examples/docker
